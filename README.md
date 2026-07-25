@@ -8,7 +8,7 @@ This was my thesis project at the University of Tasmania: *Efficient Blockchain 
 
 With normal Simplified Payment Verification (SPV), you walk the chain one block at a time, so verification gets slower as the chain grows. Here, blocks are organised into a tree-like structure using per-block levels. A light client can then verify a block by jumping along higher-level links instead of checking every predecessor.
 
-SCV follows `LevelPrevHash` pointers back toward genesis in roughly logarithmic steps. The benchmarks compare SCV against SPV on verification time and step count, then the same idea is carried into sidechain transfer and IoT network simulations.
+Sublinear Complexity Verification (SCV) follows `LevelPrevHash` pointers back toward genesis in roughly logarithmic steps. The benchmarks compare SCV against SPV on verification time and step count, then the same idea is carried into sidechain transfer and IoT network simulations.
 
 ## Approach
 
