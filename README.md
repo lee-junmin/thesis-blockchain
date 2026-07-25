@@ -4,8 +4,6 @@ Research code for simulating sublinear-complexity blockchain verification (SCV),
 
 This was my thesis project at the University of Tasmania: *Efficient Blockchain Interoperability: a simulation of an IoT use case*.
 
-Repo: [github.com/lee-junmin/thesis-blockchain](https://github.com/lee-junmin/thesis-blockchain)
-
 ## Overview
 
 With normal Simplified Payment Verification (SPV), you walk the chain one block at a time, so verification gets slower as the chain grows. Here, blocks are organised into a tree-like structure using per-block levels. A light client can then verify a block by jumping along higher-level links instead of checking every predecessor.
@@ -35,8 +33,6 @@ visualisations/          CSV outputs, notebooks, plot scripts
 main.go                  Entry point for running experiments
 ```
 
-`part1-2/` and `part3/` are snapshots from different stages of the thesis experiments.
-
 ## Running
 
 ```bash
@@ -45,12 +41,10 @@ cd thesis-blockchain
 go run .
 ```
 
-In `main.go`, switch between the experiment entry points (`sublintest`, network tests, `IoTnetworktest`). Exported CSVs land under `visualisations/` and can be plotted with the notebooks or `plot.py`.
+In `main.go`, switch between the experiment entry points (`sublintest`, `normalityNetworkTest`, `IoTnetworktest`). Exported CSVs land under `visualisations/` and can be plotted with the notebooks or `plot.py`.
 
 ## What I measured
 
 - SCV verification time and step count vs chain size (compared to SPV)
 - Sidechain transfer behaviour under different network conditions
 - An IoT interoperability scenario using the same verification model
-
-
